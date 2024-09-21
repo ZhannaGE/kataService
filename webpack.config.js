@@ -11,8 +11,7 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: 'bundle.js', // имя выходного файла
-    path: path.resolve(__dirname, 'dist', 'js'), // полный путь к директории dist/js
+    filename: './js/bundle.js'
   },
 
   // Source maps для удобства отладки
