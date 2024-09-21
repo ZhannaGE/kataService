@@ -1,0 +1,138 @@
+.brand__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  max-height: 200px;
+  transition: 0.5s;
+  padding: 40px 0 30px 20px;
+
+  &.expand {
+    max-height: 800px;
+  }
+
+  &.active {
+    max-height: 100%;
+  }
+
+  @media (min-width: 100px) and (max-width: 666px) {
+    max-height: 170px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media (min-width: 668px) {
+    max-height: 137px;
+    gap: 52px 45px;
+  }
+
+  @media (min-width: 1120px) {
+    gap: 58px 45px;
+  }
+}
+
+.brand__read-more {
+  font-size: 17px;
+}
+
+.brand__title {
+  text-transform: uppercase;
+  color: var(--light-text);
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "TT Lakes", serif;
+  background: linear-gradient(90deg, rgba(244, 244, 244, 0.004), #ffffff);
+  padding: 20px 0 20px 20px;
+}
+
+.brand__symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--pink-button);
+
+  &:hover {
+    color: var(--lightMain-bg);
+  }
+}
+
+.brand__item {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--lightMain-bg);
+  padding: 10px;
+  margin: 0 !important;
+  width: 100%;
+
+  @media (min-width: 668px) {
+    margin: 10px;
+  }
+}
+
+.brand__logo {
+  max-width: 100px;
+  height: auto;
+}
+
+.brand__border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--pink-button);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--pink-button);
+  }
+}
+
+.brand {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--green-line);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: 668px) {
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-bottom: 70px;
+  }
+}
+
+.brand__toggle-container {
+  @media (min-width: 100px) and (max-width: 666px) {
+    display: none;
+  }
+
+  @media (min-width: 668px) {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-left: 10px;
+    padding-bottom: 16px;
+    padding-top: 30px;
+  }
+}
