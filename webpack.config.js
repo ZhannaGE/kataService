@@ -11,7 +11,9 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js'
+    filename: './js/bundle.js',
+    path: path.resolve(__dirname, 'dist'), // Путь для сборки
+    publicPath: '/kataService/', // Путь для GitHub Pages
   },
 
   // Source maps для удобства отладки
@@ -32,14 +34,13 @@ module.exports = {
         }
       },
 
-      // Компилируем SCSS в CSS
+      // Добавлено правило для обработки SCSS
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          MiniCssExtractPlugin.loader, // Извлекает CSS в отдельный файл
+          'css-loader', // Преобразует CSS в CommonJS
+          'sass-loader' // Компилирует Sass в CSS
         ],
       },
 
