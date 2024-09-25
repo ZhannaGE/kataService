@@ -17,6 +17,7 @@
       overflow: auto;
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
+      display: flex;
 
       &::-webkit-scrollbar {
         display: none; /* Chrome, Safari */
@@ -28,7 +29,13 @@
     }
   }
 
-  &__container {
+ &__tab-list{
+   @media (min-width: 668px){
+     flex-wrap: wrap;
+   }
+ }
+
+ &__container {
     position: relative;
     padding: 20px;
 
@@ -141,12 +148,25 @@
     }
 
     @media (min-width: 668px) {
-      max-height: 160px;
+      max-height: 140px;
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.2px;
       width: 312px;
+      &-hidden {
+        max-height: 100%;
+      }
     }
+
+
+    @media (min-width: 1120px) {
+      max-height: 200px;
+      &-hidden {
+        max-height: 100%;
+      }
+    }
+
+
   }
 
   &__toggle-container {
