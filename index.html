@@ -11,7 +11,6 @@
 <body>
 
 <div class="wrapper">
-
   <aside class="menu">
     <div class="menu__modal">
       <header class="menu__header">
@@ -55,8 +54,15 @@
             </button>
           </li>
         </ul>
-        <div class="menu__email"><a href="mailto:mail@cps.com">mail@cps.com</a></div>
-        <div class="menu__phone"><a href="tel:+78008908900">8 800 890 8900</a></div>
+
+        <address class="menu__contact">
+          <div class="menu__email">
+            <a href="mailto:mail@cps.com">mail@cps.com</a>
+          </div>
+          <div class="menu__phone">
+            <a href="tel:+78008908900">8 800 890 8900</a>
+          </div>
+        </address>
 
         <ul class="menu__languages">
           <li class="menu__language"><a href="#">RU</a></li>
@@ -67,74 +73,14 @@
     </div>
   </aside>
 
-  <aside class="feedback">
-    <div class="feedback-modal">
-      <button class="feedback__close-button buttonBack">
-        <img src="./img/close.svg" alt="Close">
-      </button>
-      <div class="feedback__left-bar"></div>
-      <h2 class="feedback__title">Обратная связь</h2>
-      <form class="feedback__form">
-        <div class="feedback__input-group">
-          <input type="text" class="feedback__input" placeholder="Имя" required>
-        </div>
-        <div class="feedback__input-group">
-          <input type="tel" class="feedback__input" placeholder="Телефон" required>
-        </div>
-        <div class="feedback__input-group">
-          <input type="email" class="feedback__input" placeholder="Электронная почта" required>
-        </div>
-        <div class="feedback__input-group">
-          <textarea class="feedback__textarea" placeholder="Сообщение" required></textarea>
-        </div>
-        <p class="feedback__consent">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="feedback__consent-link">обработку персональных данных</a>
-          и соглашаетесь с нашей
-          <a href="#" class="feedback__consent-link">политикой конфиденциальности</a>.
-        </p>
-        <button type="submit" class="feedback__submit">
-          ОТПРАВИТЬ
-          <span class="feedback__submit-icon">&gt;</span>
-        </button>
-      </form>
-    </div>
-  </aside>
-
-  <aside class="call">
-    <div class="call-modal">
-      <button class="call__close-button buttonBack">
-        <img src="./img/close.svg" alt="Close">
-      </button>
-      <div class="call__left-bar"></div>
-      <h2 class="call__title">Заказать звонок</h2>
-      <form class="call__form">
-        <div class="call__input-group">
-          <input type="tel" class="call__input" placeholder="Телефон" required>
-        </div>
-
-        <p class="call__consent">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="call__consent-link">обработку персональных данных</a>
-          и соглашаетесь с нашей
-          <a href="#" class="call__consent-link">политикой конфиденциальности</a>.
-        </p>
-        <button type="submit" class="call__submit">
-          ОТПРАВИТЬ
-          <span class="call__submit-icon">&gt;</span>
-        </button>
-      </form>
-    </div>
-  </aside>
-
-  <section>
+  <section class="container">
     <header class="header">
       <button class="header__menu-button buttonBack">
         <img src="./img/burger.svg" alt="menu">
       </button>
-      <div class="header__logo">
+      <a class="header__logo">
         <img src="./img/Group.svg" alt="CPS Logo">
-      </div>
+      </a>
 
       <div class="info--size768">
         <ul class="info-list">
@@ -170,7 +116,6 @@
         </li>
       </ul>
     </header>
-
     <main class="main">
       <section class="services">
         <div class="services__container">
@@ -200,13 +145,26 @@
         </div>
         <nav class="services__tabs">
           <ul class="services__tab-list">
-            <li class="services__tab services__tab--active">Ремонтируемые бренды</li>
-            <li class="services__tab">Дополнительные услуги</li>
-            <li class="services__tab">Цены на услуги</li>
-            <li class="services__tab">Адреса сервисных центров</li>
-            <li class="services__tab">Специальные цены</li>
-            <li class="services__tab">Отзывы</li>
+            <li class="services__tab services__tab--active">
+              <a href="#brands">Ремонтируемые бренды</a>
+            </li>
+            <li class="services__tab">
+              <a href="#services">Дополнительные услуги</a>
+            </li>
+            <li class="services__tab">
+              <a href="#prices">Цены на услуги</a>
+            </li>
+            <li class="services__tab">
+              <a href="#services">Адреса сервисных центров</a>
+            </li>
+            <li class="services__tab">
+              <a href="#prices">Специальные цены</a>
+            </li>
+            <li class="services__tab">
+              <a href="#reviews">Отзывы</a>
+            </li>
           </ul>
+
         </nav>
         <div class="services__info">
           <div class="services__description">
@@ -217,6 +175,8 @@
               <br>
               Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
               количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
+              советуют нас родным и близким.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
               советуют нас родным и близким.
             </p>
             <button class="services__toggle-container myBtn">
@@ -230,7 +190,7 @@
         </div>
       </section>
 
-      <section class="brand">
+      <section class="brand" id="brand">
         <h2 class="brand__title">Ремонт техники различных брендов</h2>
 
         <div class="swiper mySwiper">
@@ -344,7 +304,7 @@
         </div>
       </section>
 
-      <section class="tech">
+      <section class="tech" id="services">
         <h2 class="tech__title">Ремонт различных видов техники</h2>
 
         <div class="swiper mySwiper">
@@ -427,7 +387,7 @@
         </div>
       </section>
 
-      <section class="price">
+      <section class="price" id="prices">
         <h2 class="price__title">Цены на услуги</h2>
 
         <div class="swiper mySwiper">
@@ -562,7 +522,7 @@
       </section>
 
     </main>
-    <footer class="footer">
+    <footer class="footer" id="reviews">
       <div class="footer__content">
         <p class="footer__developed">© 2019 CPS <br>
           Разработано командой Apesong</p>
@@ -571,6 +531,65 @@
       </div>
     </footer>
   </section>
+
+  <aside class="feedback">
+    <div class="feedback-modal">
+      <button class="feedback__close-button buttonBack">
+        <img src="./img/close.svg" alt="Close">
+      </button>
+      <div class="feedback__left-bar"></div>
+      <h2 class="feedback__title">Обратная связь</h2>
+      <form class="feedback__form">
+        <div class="feedback__input-group">
+          <input type="text" class="feedback__input" placeholder="Имя" required>
+        </div>
+        <div class="feedback__input-group">
+          <input type="tel" class="feedback__input" placeholder="Телефон" required>
+        </div>
+        <div class="feedback__input-group">
+          <input type="email" class="feedback__input" placeholder="Электронная почта" required>
+        </div>
+        <div class="feedback__input-group">
+          <textarea class="feedback__textarea" placeholder="Сообщение" required></textarea>
+        </div>
+        <p class="feedback__consent">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="feedback__consent-link">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#" class="feedback__consent-link">политикой конфиденциальности</a>.
+        </p>
+        <button type="submit" class="feedback__submit">
+          ОТПРАВИТЬ
+          <span class="feedback__submit-icon">&gt;</span>
+        </button>
+      </form>
+    </div>
+  </aside>
+  <aside class="call">
+    <div class="call-modal">
+      <button class="call__close-button buttonBack">
+        <img src="./img/close.svg" alt="Close">
+      </button>
+      <div class="call__left-bar"></div>
+      <h2 class="call__title">Заказать звонок</h2>
+      <form class="call__form">
+        <div class="call__input-group">
+          <input type="tel" class="call__input" placeholder="Телефон" required>
+        </div>
+
+        <p class="call__consent">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#" class="call__consent-link">обработку персональных данных</a>
+          и соглашаетесь с нашей
+          <a href="#" class="call__consent-link">политикой конфиденциальности</a>.
+        </p>
+        <button type="submit" class="call__submit">
+          ОТПРАВИТЬ
+          <span class="call__submit-icon">&gt;</span>
+        </button>
+      </form>
+    </div>
+  </aside>
 </div>
 
 <script type="text/javascript" src="./js/bundle.js"></script></body>
